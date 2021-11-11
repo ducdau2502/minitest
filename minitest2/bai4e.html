@@ -25,9 +25,11 @@
                 } else if (number1 === number2 || number2 === number3 || number3 === number1) {
                     document.getElementById('display').innerHTML = "Đây là tam giác cân";
                 } else if ((number1 ** 2 === number2 ** 2 + number3 ** 2) ||
-                    (number2 ** 2 === number1 ** 2 + number3 ** 2) ||
-                    (number3 ** 2 === number1 ** 2 + number2 ** 2)) {
+                            (number2 ** 2 === number1 ** 2 + number3 ** 2) ||
+                            (number3 ** 2 === number1 ** 2 + number2 ** 2)) {
                     document.getElementById('display').innerHTML = "Đây là tam giác vuông";
+                } else {
+                    document.getElementById('display').innerHTML = "Đây là tam giác";
                 }
             } else {
                 document.getElementById('display').innerHTML = "Đây là không phải 3 cạnh của tam giác";
