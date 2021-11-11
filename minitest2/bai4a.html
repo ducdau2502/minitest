@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="input" onchange="result()">
+<p id="display"></p>
+<script>
+    function result() {
+        let number = +document.getElementById('input').value;
+        let chuVi = 4 * number;
+        let dienTich = number ** 2;
+        document.getElementById('display').innerHTML = 'Chu vi hình vuông là: ' + chuVi + '</br>' + 'Diện tích hình vuông là: ' + dienTich;
+    }
+</script>
+</body>
+</html>

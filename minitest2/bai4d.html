@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="input">
+<button type="button" onclick="result()">Thế kỷ</button>
+<p id="display"></p>
+<script>
+    function result() {
+        let number = +document.getElementById('input').value;
+        let theKy = Math.floor((number / 100)) + 1;
+        document.getElementById('display').innerHTML = 'Thế kỷ: ' + theKy;
+    }
+</script>
+</body>
+</html>

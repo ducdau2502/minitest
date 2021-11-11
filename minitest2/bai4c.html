@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="input1" value="">
+<input type="number" id="input2" value="">
+<button type="button" onclick="result()">Tính toán</button>
+</form>
+<h1 id="display"></h1>
+
+</body>
+<script>
+    function result() {
+        let number1 = parseInt(document.getElementById('input1').value);
+        let number2 = parseInt(document.getElementById('input2').value);
+        if ( number2 >= number1) {
+            let soSoHang = (number2 - number1) / 1 + 1;
+            let result = (number2 + number1) * soSoHang / 2;
+            document.getElementById('display').innerHTML = "Tổng các số từ số 1 đến số 2 là " + result;
+        } else {
+            document.getElementById('display').innerHTML = " Nhập số thứ 2 to hơn số 1 đê!!!"
+        }
+    }
+</script>
+</html>

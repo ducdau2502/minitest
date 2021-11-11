@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="number" id="input1" value="">
+    <input type="number" id="input2" value="">
+    <button type="button" onclick="result()">Tính toán</button>
+</form>
+<h1 id="display"></h1>
+
+</body>
+<script>
+    function result() {
+        let number1 = parseInt(document.getElementById('input1').value);
+        let number2 = parseInt(document.getElementById('input2').value);
+        let result = number1 * number2;
+        document.getElementById('display').innerHTML = "Tích hai số là " + result;
+    }
+
+</script>
+</html>

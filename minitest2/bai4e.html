@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="input1" value="">
+<input type="number" id="input2" value="">
+<input type="number" id="input3" value="">
+<button type="button" onclick="result()">Tính toán</button>
+</form>
+<h1 id="display"></h1>
+<script>
+    function result() {
+        let number1 = +document.getElementById('input1').value;
+        let number2 = +document.getElementById('input2').value;
+        let number3 = +document.getElementById('input3').value;
+        if (number1 > 0 && number2 > 0 && number3 > 0) {
+            if (number1 + number2 > number3 &&
+                number1 + number3 > number2 &&
+                number3 + number2 > number1) {
+                if (number1 === number2 && number2 === number3 && number3 === number1) {
+                    document.getElementById('display').innerHTML = "Đây là tam giác đều";
+                } else if (number1 === number2 || number2 === number3 || number3 === number1) {
+                    document.getElementById('display').innerHTML = "Đây là tam giác cân";
+                } else if ((number1 ** 2 === number2 ** 2 + number3 ** 2) ||
+                    (number2 ** 2 === number1 ** 2 + number3 ** 2) ||
+                    (number3 ** 2 === number1 ** 2 + number2 ** 2)) {
+                    document.getElementById('display').innerHTML = "Đây là tam giác vuông";
+                }
+            } else {
+                document.getElementById('display').innerHTML = "Đây là không phải 3 cạnh của tam giác";
+            }
+        } else {
+            document.getElementById('display').innerHTML = "Đây là không phải 3 cạnh của tam giác";
+        }
+    }
+</script>
+</body>
+</html>
