@@ -6,30 +6,12 @@
 </head>
 <body>
 <script>
-    // function isPrime(number) {
-    //     number = 2;
-    //     let result = 0;
-    //     while (number < 200) {
-    //         let flag = true;
-    //         for (let i = 2; i <= Math.sqrt(number); i++) {
-    //             if (number % i === 0) {
-    //                 flag = false;
-    //                 break;
-    //             }
-    //         }
-    //         if (flag) {
-    //             result += number;
-    //         }
-    //         number++;
-    //     }
-    //     return result;
-    // }
-    //
-    // document.write(isPrime())
+    let arrayLength = prompt("Nhập vào số lượng phần tử trong mảng: ");
+    let array = [];
+    for (let i = 0; i < arrayLength; i++) {
+        array[i] = +prompt(`Nhập vào phần tử thứ ${i + 1} :`);
+    }
 
-    // cách 2
-
-    let result = 0;
     function isPrimes(num) {
         if (num < 2) {
             return false
@@ -44,16 +26,16 @@
 
     }
 
-    function sumPrime(num) {
-        num = 2;
-        for (let i = 2; i < 200; i++) {
-            if (isPrimes(num)) {
-                result += num;
+    function sumPrime() {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (isPrimes(array[i]) && array[i] < 200) {
+                sum = sum + array[i];
             }
-            num++;
         }
-        return result
+        return sum;
     }
+
     document.write(sumPrime())
 
 
