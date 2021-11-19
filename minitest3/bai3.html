@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function isPrime(number) {
+    //     number = 2;
+    //     let result = 0;
+    //     while (number < 200) {
+    //         let flag = true;
+    //         for (let i = 2; i <= Math.sqrt(number); i++) {
+    //             if (number % i === 0) {
+    //                 flag = false;
+    //                 break;
+    //             }
+    //         }
+    //         if (flag) {
+    //             result += number;
+    //         }
+    //         number++;
+    //     }
+    //     return result;
+    // }
+    //
+    // document.write(isPrime())
+
+    // cách 2
+
+    let result = 0;
+    function isPrimes(num) {
+        if (num < 2) {
+            return false
+        } else {
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false
+                }
+            }
+            return true
+        }
+
+    }
+
+    function sumPrime(num) {
+        num = 2;
+        for (let i = 2; i < 200; i++) {
+            if (isPrimes(num)) {
+                result += num;
+            }
+            num++;
+        }
+        return result
+    }
+    document.write(sumPrime())
+
+
+</script>
+</body>
+</html>
